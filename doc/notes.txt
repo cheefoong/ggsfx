@@ -1,0 +1,18 @@
+1. Create new page
+a. create new controller
+$php artisan make:controller PagesController
+
+b. edit PagesController.php
+- add 
+function home()
+{
+return view('home');
+}
+
+c. add page in view home.blade.php
+<html>
+...
+</html>
+
+d. add route to routes.php
+Route::get('/', 'PagesController@home');
